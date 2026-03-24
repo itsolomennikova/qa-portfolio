@@ -1,3 +1,4 @@
+</> Markdown
 # API Testing – Login Functionality
 
 ## 📌 Overview
@@ -26,6 +27,7 @@ POST /api/login
   "password": "123456"
 }
 
+</>JSON
 {
   "token": "abc123xyz",
   "userId": 101
