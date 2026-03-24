@@ -1,25 +1,23 @@
-</> Markdown
 # API Testing – Login Functionality
 
-## 📌 Overview
+## Overview
 This document describes API testing of the login functionality for a web application.
-
 Testing was performed using Fiddler by intercepting and analyzing HTTP requests and responses.
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 - Fiddler
 - Browser DevTools (Network tab)
 
 ---
 
-## 🔗 Endpoint
+## Endpoint
 POST /api/login
 
 ---
 
-## 📥 Request Example
+## Request Example
 
 ```json
 {
@@ -27,13 +25,14 @@ POST /api/login
   "password": "123456"
 }
 
-</>JSON
+## Response Example (Success)
 {
   "token": "abc123xyz",
   "userId": 101
 }
 
-✅ Test Scenarios
+Test Scenarios
+
 1. Valid Login
 Send request with valid email and password
 Expected: 200 OK
@@ -49,15 +48,20 @@ Validation error returned
 4. Missing Fields
 Send request without password field
 Expected: 400 Bad Request
-🔍 What Was Verified
+
+ What Was Verified
+
 Correct status codes: 200 (success), 401 (unauthorized), 400 (bad request)
 Response structure (JSON format)
 Presence of authentication token
 Error messages correctness
 Response time (basic check)
-⚠️ Observations
+
+Observations
+
 Error messages may not always clearly describe the issue
 Validation behavior depends on request structure
-📊 Conclusion
+
+Conclusion
 
 API login functionality handles basic scenarios correctly, but error handling and validation messages can be improved.
